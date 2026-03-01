@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store.js";
-export const API_URL = "http://localhost:8000/api";
+export const API_URL = "https://only4u-backend.onrender.com/api";
 
 
 createRoot(document.getElementById("root")).render(
