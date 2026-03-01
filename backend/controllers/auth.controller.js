@@ -74,8 +74,8 @@ const signUp = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "Strict", // ✅ more secure, adjust if needed
-      secure: false, // ⚠️ set true in production with HTTPS
+      sameSite: "None", // ✅ more secure, adjust if needed
+      secure: true, // ⚠️ set true in production with HTTPS
       maxAge: 24 * 60 * 60 * 1000,
     });
 
@@ -118,9 +118,9 @@ const Login = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "Strict", // ✅ more secure, adjust if needed
+      sameSite: "None", // ✅ more secure, adjust if needed
       maxAge: 24 * 60 * 60 * 1000, // 1 day
-      secure: false
+      secure: true
     });
 
     // return res.status(200).json({ message: "Login successful" });
