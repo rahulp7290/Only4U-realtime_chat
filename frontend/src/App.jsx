@@ -50,7 +50,7 @@ import { io } from "socket.io-client";
 import { useDispatch } from "react-redux";
 import { setSocket, setOnlineUsers } from "./redux/userSlice.js";
 
-const serverUrl = "http://localhost:8000"; // ✅ define server URL
+const serverUrl = "https://only4u-backend.onrender.com"; // ✅ define server URL
 
 const App = () => {
   getCurrentUser();
