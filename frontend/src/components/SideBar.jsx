@@ -323,8 +323,9 @@ const SideBar = () => {
             className="flex items-center p-3 bg-white rounded-2xl shadow-sm hover:shadow-md hover:bg-sky-50 transition cursor-pointer"
           >
             <img
-              src={user?.image || dp }
-               alt="profile"
+              src={user?.image || dp}
+              alt="profile"
+              className="w-12 h-12 rounded-full object-cover mr-3"
             />
             <div className="flex flex-col">
               <h1 className="text-sm font-semibold">{user.name}</h1>
