@@ -64,6 +64,7 @@ const App = () => {
         query: {
           userId: userData?._id, // ✅ pass user ID in query
         },
+          withCredentials: true
       });
       dispatch(setSocket(socketio)); // save socket in Redux
 
