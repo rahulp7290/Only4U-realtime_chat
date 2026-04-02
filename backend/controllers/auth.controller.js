@@ -72,12 +72,20 @@ const signUp = async (req, res) => {
 
     const token = await genToken(user._id);
 
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   sameSite: "None", // ✅ more secure, adjust if needed
+    //   secure: true, // ⚠️ set true in production with HTTPS
+    //   maxAge: 24 * 60 * 60 * 1000,
+    // });
+
     res.cookie("token", token, {
-      httpOnly: true,
-      sameSite: "None", // ✅ more secure, adjust if needed
-      secure: true, // ⚠️ set true in production with HTTPS
-      maxAge: 24 * 60 * 60 * 1000,
-    });
+  httpOnly: true,
+  sameSite: "None",
+  secure: true,
+  maxAge: 24 * 60 * 60 * 1000,
+  path: "/"
+});
 
     // 🔥 RETURN USER DATA (NO PASSWORD)
     return res.status(201).json({
